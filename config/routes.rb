@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
-  get 'gift/index'
 
-  get 'gift/show'
+  get 'user/index'
 
-  get 'gift/new'
+  get 'user/login'
 
-  get 'gift/edit'
-
-  get 'gift/delete'
+  get 'user/logout'
 
   match ':controller(/:action)', :via => [:get, :post]
 

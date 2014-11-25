@@ -1,2 +1,14 @@
-<h1>Gift#delete</h1>
-<p>Find me in app/views/gift/delete.html.erb</p>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class = "gift delete">
+  <h2>Delete Gift</h2>
+  
+  <h2>Are you sure you want to delete <%= @gift.name %>?</h2>
+  <%= form_for(:gift, :url => {:action => 'destroy', :id => @gift.id}) do |f| %>
+
+  <div class="form buttons">
+    <%= submit_tag("Delete gift") %>
+  </div>
+
+  <% end %>
+</div>

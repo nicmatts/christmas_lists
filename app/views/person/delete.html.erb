@@ -1,2 +1,17 @@
-<h1>Person#delete</h1>
-<p>Find me in app/views/person/delete.html.erb</p>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class = "person new">
+  <h2>Delete Person</h2>
+  
+  <h2>Are you sure you want to delete <%= @person.name %></h2>
+  <%= form_for(:person, :url => {:action => 'destroy', :id => @person.id}) do |f| %>
+
+  <!--:f is what the partial template is using, f is what this layout uses -->
+  <%= render(:partial => "form", :locals => {:f => f}) %>
+
+  <div class="form buttons">
+    <%= submit_tag("Delete person") %>
+  </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </p>
+
+  <p><%= f.label(:person_id, "Person") %></p>
+    
+    <% people = options_from_collection_for_select(Person.all, :id, :name) %>
+    <%= f.select(:person_id, people) %>
+  </p>

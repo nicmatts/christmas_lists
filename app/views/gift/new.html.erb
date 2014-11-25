@@ -1,2 +1,16 @@
-<h1>Gift#new</h1>
-<p>Find me in app/views/gift/new.html.erb</p>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class = "gift new">
+  <h2>Add Gift</h2>
+
+  <%= form_for(:gift, :url => {:action => 'create'}) do |f| %>
+
+  <!--:f is what the partial template is using, f is what this layout uses -->
+  <%= render(:partial => "form", :locals => {:f => f}) %>
+
+  <div class="form buttons">
+    <%= submit_tag("Add gift") %>
+  </div>
+
+  <% end %>
+</div>

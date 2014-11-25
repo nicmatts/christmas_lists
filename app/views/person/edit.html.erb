@@ -1,2 +1,16 @@
-<h1>Person#edit</h1>
-<p>Find me in app/views/person/edit.html.erb</p>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class = "person new">
+  <h2>Edit Person</h2>
+
+  <%= form_for(:person, :url => {:action => 'update', :id => @person.id}) do |f| %>
+
+  <!--:f is what the partial template is using, f is what this layout uses -->
+  <%= render(:partial => "form", :locals => {:f => f}) %>
+
+  <div class="form buttons">
+    <%= submit_tag("Edit person") %>
+  </div>
+
+  <% end %>
+</div>

@@ -11,20 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125000447) do
+ActiveRecord::Schema.define(version: 20141125184608) do
 
   create_table "gifts", force: true do |t|
     t.string   "name"
     t.string   "url"
     t.boolean  "purchased"
+    t.integer  "person_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "comments",   limit: 225
   end
 
   create_table "people", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "username",        limit: 25
+    t.string   "password",        limit: 12
+    t.string   "password_digest"
   end
 
 end

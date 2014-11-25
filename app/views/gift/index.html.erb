@@ -1,2 +1,21 @@
-<h1>Gift#index</h1>
-<p>Find me in app/views/gift/index.html.erb</p>
+<h1>Gifts</h1>
+
+<%= link_to("Add gift to wishlist", {:action => 'new'}, :class => 'back-link') %>
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Wanted by</th>
+    <th>Purchased</th>
+  </tr>
+<% @gifts.each do |gift| %>
+  <tr>
+    <td><%= gift.name %></td>
+    <td><%= gift.person_id %></td>
+    <td><%= gift.purchased ? 'yes' : '' %></td>
+    <td class="actions">
+      <%= link_to("Show", {:action => 'show', :id => gift.id }, :class =>'action show') %>
+      <%= link_to("Edit", {:action => 'edit', :id => gift.id }, :class =>'action edit') %>
+      <%= link_to("Delete", {:action => 'delete', :id => gift.id }, :class => 'action delete') %>
+  </tr>
+  <% end %>
+</table>
