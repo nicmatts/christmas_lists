@@ -1,0 +1,13 @@
+<h1>People</h1>
+
+<table>
+<% @people.each do |person| %>
+  <tr>
+    <td><%= person.name %></td>
+    <td class="actions">
+      <%= link_to("Show", {:action => 'show', :id => person.id }, :class =>'action show') %>
+      <%= link_to("Edit", {:action => 'edit', :id => person.id }, :class =>'action edit') %>
+      <%= link_to("Delete", {:action => 'delete', :id => person.id }, :class => 'action delete') %>
+  </tr>
+  <% end %>
+</table>
