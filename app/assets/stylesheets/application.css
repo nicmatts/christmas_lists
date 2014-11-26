@@ -40,7 +40,7 @@ body {
   color: rgb(158, 0, 0);
 }
 
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover{
+.navbar-default .navbar-brand, .navbar-default .navbar-nav li a:hover{
   color: white; 
   text-decoration: none;
 }
