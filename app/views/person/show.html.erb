@@ -1,18 +1,20 @@
-<h1><%= @person.name %>'s wish list</h1>
 
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Purchased?</th>
-    <th>Notes</th>
-  </tr>
-<% @person.gifts.each do |gift| %>
-  <tr>
-    <td><a href="<%= gift.url %>"><%= gift.name %></a></td>
-    <td><%= gift.purchased %></td>
-    <td><%= gift.comments %></td>
-  </tr>
-<% end %>
-</table>
+
+    <h1><%= @person.name %>'s wish list</h1>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Purchased?</th>
+        <th>Notes</th>
+      </tr>
+    <% @person.gifts.each do |gift| %>
+      <tr>
+        <td><a href="<%= gift.url %>"><%= gift.name %></a></td>
+        <td><%= gift.purchased %></td>
+        <td><%= gift.comments %></td>
+      </tr>
+    <% end %>
+    </table>
+
 
 

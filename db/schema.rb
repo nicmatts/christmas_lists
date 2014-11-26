@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125184608) do
+ActiveRecord::Schema.define(version: 20141125191210) do
 
   create_table "gifts", force: true do |t|
     t.string   "name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20141125184608) do
     t.string   "username",        limit: 25
     t.string   "password",        limit: 12
     t.string   "password_digest"
+    t.boolean  "super",                      default: false
   end
 
 end

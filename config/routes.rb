@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'user/index'
+  root 'gift#index'
 
-  get 'user/login'
+  get 'login' => 'user#login'
 
-  get 'user/logout'
+  get 'logout' => 'user#logout'
 
   match ':controller(/:action)', :via => [:get, :post]
 
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

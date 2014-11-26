@@ -12,4 +12,46 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap
  */
+
+body {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 16px;
+  background: url('http://funwithmattsons.com/images/santa-cool-wallpaper.jpg');
+}
+
+.navbar-default {
+  background-color: #389347;
+  border: none;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-default .navbar-brand {
+  font-size: 34px;
+  color: rgb(158, 0, 0);
+}
+
+.navbar .navbar-nav li a{
+  font-size: 24px;
+  color: rgb(158, 0, 0);
+}
+
+.navbar-header > .navbar-brand a:hover{
+  color: white;
+}
+
+.list {
+  background-color: white;
+  width: 60%;
+  margin: 1em auto;
+  padding: 1px 20px 20px 20px;
+}
+
+.list table{
+  font-size: 20px;
+  width: 90%;
+}

@@ -1,4 +1,5 @@
 class PersonController < ApplicationController
+  before_action :confirm_logged_in
 
   def index
     @people = Person.all

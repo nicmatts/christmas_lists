@@ -9,6 +9,16 @@
     <%= f.text_field :url %>
   </p>
 
+  <p>
+    <%= f.label(:comments, "Notes") %><br>
+    <%= f.text_field :comments %>
+  </p>
+
+  <p>
+    <%= f.label :purchased %><br>
+    <%= f.check_box :purchased %>
+  </p>
+
   <p><%= f.label(:person_id, "Person") %></p>
     
     <% people = options_from_collection_for_select(Person.all, :id, :name) %>

@@ -1,4 +1,6 @@
 class GiftController < ApplicationController
+  before_action :confirm_logged_in
+
   def index
     @gifts = Gift.all
     @person = Person.all
@@ -54,6 +56,6 @@ class GiftController < ApplicationController
 
   private
     def gift_params
-      params.require(:gift).permit(:name, :url, :purchased, :person_id)
+      params.require(:gift).permit(:name, :url, :purchased, :person_id, :comments)
     end
 end
