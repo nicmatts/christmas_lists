@@ -7,7 +7,7 @@
   <%= form_for(:gift, :url => {:action => 'destroy', :id => @gift.id}) do |f| %>
 
   <div class="form buttons">
-    <%= submit_tag("Delete gift") %>
+    <%= submit_tag("Delete gift", :class => 'btn') %>
   </div>
 
   <% end %>

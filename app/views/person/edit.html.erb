@@ -8,8 +8,8 @@
   <!--:f is what the partial template is using, f is what this layout uses -->
   <%= render(:partial => "form", :locals => {:f => f}) %>
 
-  <div class="form buttons">
-    <%= submit_tag("Edit person") %>
+  <div class="form buttons btn">
+    <%= submit_tag("Edit person", :class => 'btn') %>
   </div>
 
   <% end %>
