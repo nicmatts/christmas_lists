@@ -8,6 +8,12 @@
   <!--:f is what the partial template is using, f is what this layout uses -->
   <%= render(:partial => "form", :locals => {:f => f}) %>
 
+  <p><%= f.label(:person_id, "Person") %></p>
+    
+    <% people = options_from_collection_for_select(Person.all, :id, :name) %>
+    <%= f.select(:person_id, people) %>
+  </p>
+
   <div class="form buttons">
     <%= submit_tag("Add gift") %>
   </div>
