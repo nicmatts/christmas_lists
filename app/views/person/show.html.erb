@@ -4,7 +4,7 @@
     <th style = "width: 40%">Item</th>
     <th>Notes</th>
   </tr>
-<% @person.gifts.each do |gift| %>
+<% @person.gifts.order('name ASC').each do |gift| %>
   <tr>
     <td><span class=<%= 'purchased' if gift.purchased == true %>><a href="<%= gift.url %>"><%= gift.name %></a></span></td>
     <td><%= gift.comments %></td>

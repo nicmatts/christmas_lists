@@ -11,7 +11,7 @@ class PersonController < ApplicationController
 
   def show
     @person = Person.find(params[:id])
-    @gifts = Gift.all.order("name ASC")
+    @gifts = Gift.order("name ASC")
   end
 
   def new
