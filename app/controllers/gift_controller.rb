@@ -1,6 +1,8 @@
 class GiftController < ApplicationController
   before_action :confirm_logged_in
 
+  layout "application"
+
   def index
     @gifts = Gift.order("name ASC")
     @person = Person.all

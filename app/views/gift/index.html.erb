@@ -11,7 +11,7 @@
 <% @gifts.each do |gift| %>
   <tr>
     <td><%=link_to(gift.name, {:action => 'show', :id => gift.id }, :class =>'action') %></td>
-    <td><%= gift.person.name %></td>
+    <td><%= link_to(gift.person.name, {:controller => 'person', :action => 'show', :id => gift.person_id }, :class =>'action') %></td>
     <td><%= gift.purchased ? 'yes' : '' %></td>
     <td class="actions"> 
       <%= link_to("Mark purchased", {:action => 'edit', :id => gift.id }, :class =>'action') %><br>

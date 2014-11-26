@@ -1,5 +1,7 @@
 class UserController < ApplicationController
 
+  layout "application"
+
   before_action :confirm_logged_in, :except => [:login, :attempt_login, :logout]
 
   def index

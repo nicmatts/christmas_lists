@@ -32,7 +32,7 @@ body {
 
 .navbar-default .navbar-brand {
   font-size: 34px;
-  color: rgb(158, 0, 0);
+  color: white;
 }
 
 .navbar .navbar-nav li a{
@@ -57,13 +57,13 @@ a:hover {
   background-color: white;
   width: 65%;
   margin: 1em auto;
-  padding: 1px 20px 20px 20px;
+  padding: 1px 20px 40px 20px;
   border-radius: 10px;
 }
 
 .list table{
   font-size: 20px;
-  width: 90%;
+  width: 100%;
 }
 
 a.action {
@@ -72,4 +72,17 @@ a.action {
 
 tr.login {
   height: 45px;
+}
+
+.lg-input {
+  width: 300px;
+}
+
+.update {
+  margin: 10px;
+}
+
+.purchased a{
+  text-decoration: line-through;
+  color: #ccc;
 }

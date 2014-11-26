@@ -1,5 +1,7 @@
 class PersonController < ApplicationController
 
+  layout "application"
+
   #before_action :confirm_logged_in, :except => [:index]
 
   def index
