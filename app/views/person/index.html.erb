@@ -1,13 +1,11 @@
-<h1>People</h1>
+<h1>View a wishlist</h1>
 
 <table>
 <% @people.each do |person| %>
   <tr>
-    <td><%= person.name %></td>
-    <td class="actions">
-      <%= link_to("Show", {:action => 'show', :id => person.id }, :class =>'action show') %>
-      <%= link_to("Edit", {:action => 'edit', :id => person.id }, :class =>'action edit') %>
-      <%= link_to("Delete", {:action => 'delete', :id => person.id }, :class => 'action delete') %>
+    <td><%= link_to(person.name, {:action => 'show', :id => person.id }, :class =>'action show') %></td>
   </tr>
   <% end %>
 </table>
+<br>
+ <%= link_to("Add to wishlist", {:controller => 'gift', :action => 'new'}, :class => 'pull-right') %>

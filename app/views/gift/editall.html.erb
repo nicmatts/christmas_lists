@@ -1,15 +1,12 @@
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
 <div class = "gift edit">
-  <h2>Mark purchased</h2>
+  <h2>Edit Gift</h2>
 
   <%= form_for(:gift, :url => {:action => 'update', :id => @gift.id}) do |f| %>
 
   <!--:f is what the partial template is using, f is what this layout uses -->
-  <p>
-    <%= f.label :purchased %><br>
-    <%= f.check_box :purchased %>
-  </p>
+  <%= render(:partial => "form", :locals => {:f => f}) %>
 
   <div class="form buttons">
     <%= submit_tag("Edit gift") %>

@@ -2,9 +2,10 @@ class GiftController < ApplicationController
   before_action :confirm_logged_in
 
   def index
-    @gifts = Gift.all
+    @gifts = Gift.order("name ASC")
     @person = Person.all
   end
+
 
   def show
     @gift = Gift.find(params[:id])
@@ -33,12 +34,16 @@ class GiftController < ApplicationController
     @gift = Gift.find(params[:id])
   end
 
+  def editall
+    @gift = Gift.find(params[:id])
+  end
+
   def update
     @gift = Gift.find(params[:id])
 
     if @gift.update_attributes(gift_params)
       flash[:notice] = "#{@gift.name} was updated."
-      redirect_to(:action => 'index')
+      redirect_to(:controller => 'gift', :action => 'index')
     else
       render('edit')
     end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'gift#index'
+  root 'person#index'
 
   get 'login' => 'user#login'
 

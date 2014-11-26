@@ -1,5 +1,6 @@
 class PersonController < ApplicationController
-  before_action :confirm_logged_in
+
+  #before_action :confirm_logged_in, :except => [:index]
 
   def index
     @people = Person.all

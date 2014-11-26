@@ -3,9 +3,10 @@
 <%= link_to("Add gift to wishlist", {:action => 'new'}, :class => 'back-link') %>
 <table>
   <tr>
-    <th>Item</th>
-    <th>Wanted by</th>
-    <th>Purchased</th>
+    <th><h2>Item</h2></th>
+    <th><h2>Wanted by</h2></th>
+    <th><h2>Purchased</h2></th>
+    <th></th>
   </tr>
 <% @gifts.each do |gift| %>
   <tr>
@@ -13,9 +14,8 @@
     <td><%= gift.person_id %></td>
     <td><%= gift.purchased ? 'yes' : '' %></td>
     <td class="actions">
-      <%= link_to("Show", {:action => 'show', :id => gift.id }, :class =>'action show') %>
-      <%= link_to("Edit", {:action => 'edit', :id => gift.id }, :class =>'action edit') %>
-      <%= link_to("Delete", {:action => 'delete', :id => gift.id }, :class => 'action delete') %>
+      <%= link_to("Show", {:action => 'show', :id => gift.id }, :class =>'action') %>  <%= link_to("Edit", {:action => 'edit', :id => gift.id }, :class =>'action') %>
+      <%= link_to("Delete", {:action => 'delete', :id => gift.id }, :class => 'action') %>
   </tr>
   <% end %>
 </table>
