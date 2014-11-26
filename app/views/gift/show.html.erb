@@ -1,2 +1,6 @@
-<a href="<%= @gift.url %>"><%= @gift.name %></a>
-<%= @gift.person_id %>
+<h1><a href="<%= @gift.url %>"><%= @gift.name %></a></h1> 
+<div>
+<%= @gift.name %> is on <%= @gift.person.name %>'s wishlist.  It 
+<%= @gift.purchased ? "has" : "has not" %> been purchased. <%= @gift.comments %>
+</div>
+<%= link_to("Back to list", {:action => 'index' }, :class =>'pull-right') %>

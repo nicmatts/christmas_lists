@@ -40,13 +40,22 @@ body {
   color: rgb(158, 0, 0);
 }
 
-.navbar-header > .navbar-brand a:hover{
-  color: white;
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover{
+  color: white; 
+  text-decoration: none;
+}
+
+a {
+  color: #126C21;
+}
+
+a:hover {
+  color: #389347;
 }
 
 .list {
   background-color: white;
-  width: 60%;
+  width: 65%;
   margin: 1em auto;
   padding: 1px 20px 20px 20px;
   border-radius: 10px;
@@ -55,4 +64,12 @@ body {
 .list table{
   font-size: 20px;
   width: 90%;
+}
+
+a.action {
+  padding-right: 5px;
+}
+
+tr.login {
+  height: 45px;
 }
