@@ -19,6 +19,8 @@ body {
   font-family: 'Bubblegum Sans', cursive;
   font-size: 16px;
   background: url('http://funwithmattsons.com/images/santa-cool-wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-color: #D11307;
 }
 
 .navbar-default {
